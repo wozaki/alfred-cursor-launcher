@@ -101,8 +101,8 @@ func TestExpandPath(t *testing.T) {
 // TestProjectStore_List requires a test database
 // This is a placeholder - actual test would require creating a test database
 func TestProjectStore_List_WithTestDB(t *testing.T) {
-	if testing.Short() {
-		t.Skip("Skipping test that requires database")
+	if os.Getenv("CI") != "" {
+		t.Skip("Skipping test in CI environment (requires Cursor app)")
 	}
 
 	// Create a temporary database
