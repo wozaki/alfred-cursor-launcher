@@ -14,6 +14,8 @@ This Alfred Workflow displays a list of recently opened Cursor projects and allo
 
 It supports both local projects and remote projects (SSH, Kubernetes, Dev Containers).
 
+![Demo](docs/demo.gif)
+
 ## Requirements
 
 - macOS
