@@ -113,7 +113,11 @@ func TestProjectStore_List_WithTestDB(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to create test database: %v", err)
 	}
-	defer db.Close()
+	defer func() {
+		if err := db.Close(); err != nil {
+			t.Errorf("Failed to close database: %v", err)
+		}
+	}()
 
 	// Create table
 	_, err = db.Exec(`

@@ -115,7 +115,11 @@ func (s *ProjectStore) List() ([]Project, error) {
 	if err != nil {
 		return nil, fmt.Errorf("failed to open database: %w", err)
 	}
-	defer db.Close()
+	defer func() {
+		if closeErr := db.Close(); closeErr != nil && err == nil {
+			err = fmt.Errorf("failed to close database: %w", closeErr)
+		}
+	}()
 
 	var value string
 	err = db.QueryRow("SELECT value FROM ItemTable WHERE key = ?", "history.recentlyOpenedPathsList").Scan(&value)
@@ -147,11 +151,11 @@ func (s *ProjectStore) List() ([]Project, error) {
 func (s *ProjectStore) validateEnvironment() error {
 	cursorAppPath := "/Applications/Cursor.app"
 	if _, err := os.Stat(cursorAppPath); os.IsNotExist(err) {
-		return fmt.Errorf("Cursor app not found")
+		return fmt.Errorf("cursor app not found")
 	}
 
 	if _, err := os.Stat(s.dbPath); os.IsNotExist(err) {
-		return fmt.Errorf("Cursor database file not found: %s", s.dbPath)
+		return fmt.Errorf("cursor database file not found: %s", s.dbPath)
 	}
 
 	return nil

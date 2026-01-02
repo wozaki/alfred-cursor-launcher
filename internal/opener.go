@@ -36,11 +36,11 @@ func (o *Opener) Open(uri string) error {
 
 func (o *Opener) validateEnvironment() error {
 	if _, err := os.Stat(cursorAppPath); os.IsNotExist(err) {
-		return fmt.Errorf("Cursor app not found")
+		return fmt.Errorf("cursor app not found")
 	}
 
 	if _, err := os.Stat(cursorBinPath); os.IsNotExist(err) {
-		return fmt.Errorf("Cursor binary not found")
+		return fmt.Errorf("cursor binary not found")
 	}
 
 	return nil
