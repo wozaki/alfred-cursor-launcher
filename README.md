@@ -1,5 +1,11 @@
 # Alfred Cursor Launcher
 
+[![CI](https://github.com/wozaki/alfred-cursor-launcher/actions/workflows/ci.yml/badge.svg)](https://github.com/wozaki/alfred-cursor-launcher/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/wozaki/alfred-cursor-launcher)](https://github.com/wozaki/alfred-cursor-launcher/releases/latest)
+[![Go Report Card](https://goreportcard.com/badge/github.com/wozaki/alfred-cursor-launcher)](https://goreportcard.com/report/github.com/wozaki/alfred-cursor-launcher)
+[![Go Version](https://img.shields.io/github/go-mod/go-version/wozaki/alfred-cursor-launcher)](https://go.dev/)
+[![License](https://img.shields.io/github/license/wozaki/alfred-cursor-launcher)](LICENSE)
+
 Alfred Workflow for opening recent Cursor projects.
 
 ## Overview
