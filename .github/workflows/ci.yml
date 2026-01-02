@@ -8,6 +8,7 @@ on:
             - "**.md"
             - "LICENSE"
             - ".github/workflows/release.yml"
+            - "docs/**"
     pull_request:
         branches:
             - main
@@ -15,6 +16,7 @@ on:
             - "**.md"
             - "LICENSE"
             - ".github/workflows/release.yml"
+            - "docs/**"
 
 permissions:
     contents: write
