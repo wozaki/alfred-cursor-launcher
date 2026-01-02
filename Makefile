@@ -1,4 +1,4 @@
-.PHONY: build build-universal clean workflow test lint
+.PHONY: build build-universal clean workflow test lint lint-fix
 
 BINARY_NAME=alfred-cursor-launcher
 VERSION=$(shell git describe --tags --always --dirty 2>/dev/null || echo "dev")
@@ -40,6 +40,9 @@ test:
 
 lint:
 	go run github.com/golangci/golangci-lint/cmd/golangci-lint run ./...
+
+lint-fix:
+	go run github.com/golangci/golangci-lint/cmd/golangci-lint run --fix ./...
 
 clean:
 	rm -rf $(BUILD_DIR) $(DIST_DIR)
