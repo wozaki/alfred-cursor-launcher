@@ -160,4 +160,3 @@ func TestProjectStore_List_WithTestDB(t *testing.T) {
 		t.Errorf("Expected folderUri 'file:///test/project', got '%s'", projectList[0].FolderURI)
 	}
 }
-

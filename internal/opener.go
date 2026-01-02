@@ -106,4 +106,3 @@ func (o *Opener) openRemote(uri string) error {
 
 	return nil
 }
-
