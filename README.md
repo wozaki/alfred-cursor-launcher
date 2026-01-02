@@ -24,10 +24,16 @@ It supports both local projects and remote projects (SSH, Kubernetes, Dev Contai
 
 ## Installation
 
-### Method 1: Using Alfred Workflow File (Recommended)
+### Method 1: Using Alfred Workflow File
 
 1. Download the latest `alfred-cursor-launcher.alfredworkflow` from [Releases](https://github.com/wozaki/alfred-cursor-launcher/releases)
-2. Double-click the downloaded file to install it in Alfred
+2. Remove the quarantine attribute (required because the binary is not signed):
+   ```bash
+   xattr -cr ~/Downloads/alfred-cursor-launcher.alfredworkflow
+   ```
+3. Double-click the downloaded file to install it in Alfred
+
+> **Note**: Step 2 is required because macOS blocks unsigned binaries downloaded from the internet.
 
 ### Method 2: Build from Source
 
