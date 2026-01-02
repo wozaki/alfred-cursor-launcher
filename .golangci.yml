@@ -1,11 +1,8 @@
-linters:
-  enable:
-    - gofmt
-    - gofumpt
+version: "2"
 
-linters-settings:
-  gofmt:
-    simplify: true
-  gofumpt:
-    extra-rules: true
-
+formatters:
+  settings:
+    gofmt:
+      simplify: true
+    gofumpt:
+      extra-rules: true
