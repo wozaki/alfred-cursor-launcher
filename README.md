@@ -42,11 +42,11 @@ It supports both local projects and remote projects (SSH, Kubernetes, Dev Contai
 git clone https://github.com/wozaki/alfred-cursor-launcher.git
 cd alfred-cursor-launcher
 
-# Install dependencies
-go mod download
-
 # Build and create Alfred Workflow file
 make workflow
+
+# Open the Alfred Workflow file
+open dist/alfred-cursor-launcher.alfredworkflow
 ```
 
 ## Usage
