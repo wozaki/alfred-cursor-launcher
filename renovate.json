@@ -5,6 +5,9 @@
     ],
     "automergeType": "pr",
     "platformAutomerge": true,
+    "postUpdateOptions": [
+        "gomodTidy"
+    ],
     "packageRules": [
         {
             "matchUpdateTypes": [
