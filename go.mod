@@ -3,7 +3,7 @@ module github.com/wozaki/alfred-cursor-launcher
 go 1.25.4
 
 require (
-	github.com/golangci/golangci-lint/v2 v2.11.1
+	github.com/golangci/golangci-lint/v2 v2.11.2
 	modernc.org/sqlite v1.46.1
 )
 
