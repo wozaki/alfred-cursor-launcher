@@ -4,7 +4,7 @@ go 1.25.4
 
 require (
 	github.com/golangci/golangci-lint/v2 v2.12.2
-	modernc.org/sqlite v1.50.1
+	modernc.org/sqlite v1.51.0
 )
 
 require (
